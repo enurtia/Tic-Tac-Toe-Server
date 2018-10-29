@@ -35,7 +35,7 @@ public class User
         this.socket = socket;
         username = "Unnamed User";
         address = socket.getRemoteSocketAddress().toString().replace("/","");
-        output = new PrintWriter(new BufferedOutputStream(socket.getOutputStream()));
+        output = new PrintWriter(socket.getOutputStream());
         game = null;
         isIngame = false;
         console = serverFrame.getTextArea();
